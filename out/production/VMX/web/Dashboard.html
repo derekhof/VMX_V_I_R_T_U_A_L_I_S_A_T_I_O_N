@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VMX</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+</head>
+<body onload="getEmployee()">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="Index.html">VMX</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="Index.html">Home</a></li>
+                <li><a href="Register.html">Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <h1 class="well">Dashboard</h1>
+    <div class="col-lg-12 well">
+
+
+        <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <h1><p id="welcome"></p></h1>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                    <div class="form-group">
+                        <label>Username: </label>
+                        <p id="username"></p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Role</label>
+                            <p id="role"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Firstname</label>
+                            <p id="firstname"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label>Lastname</label>
+                            <p id="lastname"></p>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-sm-6 form-group">
+                <div class="form-group">
+                    <label>company id: </label>
+                    <p id="company_id"></p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Company name:</label>
+                        <p id="company_name"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>city:</label>
+                        <p id="city"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Zip code:</label>
+                        <p id="zip_code"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<!-- jQuery & Bootstrap -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script>
+
+
+
+    function getEmployee() {
+        var uri = "/dashboard_controller";
+
+        // Creating a json object to register the customer
+        var jsonObj = new Object();
+        jsonObj.command = "employee-data";
+
+        sendPostRequest(uri, parseEmployee, JSON.stringify(jsonObj));
+    }
+
+    function getCompany() {
+        var uri = "/dashboard_controller";
+
+        // Creating a json object to register the customer
+        var jsonObj = new Object();
+        jsonObj.command = "company-data";
+
+        sendPostRequest(uri, parseCompany, JSON.stringify(jsonObj));
+    }
+
+
+        function parseEmployee(json_response){
+
+        var response= JSON.parse(json_response);
+
+        if(response.status === "SUCCEED"){
+            var inner_response= JSON.parse(response.payload);
+            var response= JSON.parse(json_response);
+
+            $("#welcome").html("Welcome to your personal customer portal");
+            $("#username").html(inner_response.username);
+            $("#role").html(inner_response.role);
+            $("#firstname").html(inner_response.firstname);
+            $("#lastname").html(inner_response.lastname);
+
+        }else if(response.status === "NOSESSION"){
+            window.location.href = "Login.html";
+        }
+
+    }
+
+
+    function parseCompany(json_response){
+
+        var response= JSON.parse(json_response);
+
+        if(response.status === "SUCCEED"){
+            var inner_response= JSON.parse(response.payload);
+            var response= JSON.parse(json_response);
+
+            $("#company_id").html(inner_response.company_id);
+            $("#company_name").html(inner_response.company_name);
+            $("#city").html(inner_response.city);
+            $("#zip_code").html(inner_response.zip_code);
+
+        }else if(response.status === "NOSESSION"){
+            window.location.href = "Login.html";
+        }
+
+
+    }
+
+    function sendPostRequest(uri, responder, json) {
+        var sendUri = encodeURI(uri);
+        req = new XMLHttpRequest();
+        req.open("POST", sendUri, true);
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        req.send(json);
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                switch (req.status) {
+                    case 0:
+                        document.getElementById("notify").innerHTML = "Service unavailable (offline)";
+                        break;
+                    case 200:
+                        responder(req.responseText);
+                        break;
+                    case 400:
+                        document.getElementById("notify").innerHTML = "Service unavailable (error)";
+                        break
+                    default:
+                        document.getElementById("notify").innerHTML = "Service unavailable (unknown: " + req.status + ")";
+                }
+            }
+        };
+    }
+
+
+
+    function sendRequest(uri, responder) {
+        var sendUri = encodeURI(uri);
+        req = new XMLHttpRequest();
+        req.open("GET", sendUri, true);
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                switch (req.status) {
+                    case 0:
+                        document.getElementById("notify").innerHTML = "Service unavailable (offline)";
+                        break;
+                    case 200:
+                        responder(req.responseText);
+                        break;
+                    case 400:
+                        document.getElementById("notify").innerHTML = "Service unavailable (error)";
+                        break
+                    default:
+                        document.getElementById("notify").innerHTML = "Service unavailable (unknown: " + req.status + ")";
+                }
+            }
+        };
+        req.send();
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VMX</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="Index.html">VMX</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="Index.html">Home</a></li>
+                <li><a href="Register.html">Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <div class="col-sm-12 text-center">
+        <h2>Welcome to Virtual Machine Excellence</h2>
+        <p></p>
+        <hr>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="col-sm-4 text-left">
+        <h3>Titanium</h3>
+        <p></p>
+        <img src="images/titanium_server.png" class="img-rounded" alt="Cinque Terre" width="270" height="250">
+    </div>
+    <div class="col-sm-4 text-left">
+        <h3>Platinum</h3>
+        <p></p>
+        <img src="images/platinum_server.png" class="img-rounded" alt="Cinque Terre" width="270" height="250">
+    </div>
+    <div class="col-sm-4 text-left">
+        <h3>Gold</h3>
+        <p></p>
+        <img src="images/gold_server.png" class="img-rounded" alt="Cinque Terre" width="270" height="250">
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="col-sm-4 text-left">
+        <hr>
+        <h4>Standaard Titanium</h4>
+        <p>VM / Container:</p>
+        <div class="radio">
+            <label><input type="radio" checked="checked" name="gold_radio">Virtueel Machine</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="gold_radio">Container</label>
+        </div>
+        <p>20 Gigabyte Harddisk<br>
+            8 Gigabyte RAM
+        </p>
+        <p>met:<br>Hoge beschikbaarheid<br>
+            Dagelijkse backup<br>
+        </p>
+    </div>
+    <div class="col-sm-4 text-left">
+        <hr>
+        <h4>Standaard Platinum</h4>
+        <p>VM / Container:</p>
+        <div class="radio">
+            <label><input type="radio" checked="checked" name="silver_radio">Virtueel Machine</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="silver_radio">Container</label>
+        </div>
+        <p>10 Gigabyte Harddisk<br>
+            4 Gigabyte RAM
+        </p>
+        <p>met:<br>
+            Dagelijkse backup
+        </p>
+        <br>
+    </div>
+    <div class="col-sm-4 text-left">
+        <hr>
+        <h4>Standaard GOLD</h4>
+        <p>VM / Container:</p>
+        <div class="radio">
+            <label><input type="radio" checked="checked" name="brons_radio">Virtueel Machine</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="brons_radio">Container</label>
+        </div>
+        <p>5 Gigabyte Harddisk<br>
+            2 Gigabyte RAM
+        </p>
+        <br>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="col-sm-4 text-left">
+        <p>Opties:</p>
+        <div class="form-group">
+            <label for="sel1">Operating Platform:</label>
+            <select class="form-control" id="sel1">
+                <option>Linux Solaris</option>
+                <option>Linux Ubunto</option>
+                <option>Windows 10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Harddisk:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option>30 Gigabyte</option>
+                <option>40 Gigabyte</option>
+                <option>50 Gigabyte</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Geheugen:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option>16 Gigabyte RAM</option>
+                <option>32 Gigabyte RAM</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-4 text-left">
+        <p>Opties:</p>
+        <div class="form-group">
+            <label for="sel1">Operating Platform:</label>
+            <select class="form-control" id="sel1">
+                <option>Linux Solaris</option>
+                <option>Linux Ubunto</option>
+                <option>Windows 10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Harddisk:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option>20 Gigabyte</option>
+                <option>30 Gigabyte</option>
+                <option>40 Gigabyte</option>
+                <option>50 Gigabyte</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Geheugen:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option> 8 Gigabyte RAM</option>
+                <option>16 Gigabyte RAM</option>
+                <option>32 Gigabyte RAM</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Hoge beschikbaarheid</label>
+        </div>
+    </div>
+    <div class="col-sm-4 text-left">
+        <p>Opties:</p>
+        <div class="form-group">
+            <label for="sel1">Operating Platform:</label>
+            <select class="form-control" id="sel1">
+                <option>Linux Solaris</option>
+                <option>Linux Ubunto</option>
+                <option>Windows 10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Harddisk:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option>10 Gigabyte</option>
+                <option>20 Gigabyte</option>
+                <option>30 Gigabyte</option>
+                <option>40 Gigabyte</option>
+                <option>50 Gigabyte</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sel1">Geheugen:</label>
+            <select class="form-control" id="sel1">
+                <option>Geen</option>
+                <option> 4 Gigabyte RAM</option>
+                <option> 8 Gigabyte RAM</option>
+                <option>16 Gigabyte RAM</option>
+                <option>32 Gigabyte RAM</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Dagelijkse backup</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Hoge beschikbaarheid</label>
+        </div>
+    </div>
+</div>
+
+
+<div class="vmx-footer">
+    © 2017 SNE-Tech. All rights reserved.
+</div>
+
+<!-- jQuery & Bootstrap -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

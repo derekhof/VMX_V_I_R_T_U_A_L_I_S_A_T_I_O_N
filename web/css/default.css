@@ -1,0 +1,21 @@
+/* default style sheet project tijdregistratie
+
+    Created on : 30-juli-2017
+    Author     : Derek Hoffschlag
+*/
+
+.vmx-footer {
+    font-style: normal;
+    font-size: .75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: .08em;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    margin-top: .825em;
+    margin-bottom: .825em;
+    color: #221f1f;
+    padding: 14px 0
+}

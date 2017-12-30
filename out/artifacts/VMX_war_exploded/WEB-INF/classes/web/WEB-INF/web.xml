@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>Customer_Controller</servlet-name>
+        <servlet-class>Controllers.CustomerController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DashboardController</servlet-name>
+        <servlet-class>Controllers.DashboardController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Sim_Provisioning</servlet-name>
+        <servlet-class>Controllers.Sim_Provisioning</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Sim_Provisioning</servlet-name>
+        <url-pattern>/simulatie</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Customer_Controller</servlet-name>
+        <url-pattern>/customer_controller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashboardController</servlet-name>
+        <url-pattern>/dashboard_controller</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>provisioningServer</param-name>
+        <param-value>localhost</param-value>
+    </context-param>
+
+</web-app>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VMX</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+</head>
+
+<style>
+
+    .custom {
+        width: 50%;
+    }
+
+    .custom_modal{
+        padding-top: 10px;
+    }
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="Index.html">VMX</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="Index.html">Home</a></li>
+                <li><a href="Register.html">Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <h1 class="well">Login</h1>
+    <div class="col-lg-12 well">
+        <div class="row">
+            <form class="form-horizontal" method="post" id="login-form">
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" placeholder="Username" class="form-control custom" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" placeholder="Password" class="form-control custom" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block custom">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery & Bootstrap -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script>
+
+    $( "#login-form" ).submit(function( event ) {
+
+        // Creating a json object to validate user input
+        var jsonObj = new Object();
+        jsonObj.action = "login";
+        jsonObj.username = $("#username").val();
+        jsonObj.password = $("#password").val();
+        var jsonString = JSON.stringify(jsonObj);
+
+        var uri = "/customer_controller";
+        sendPostRequest(uri, registerResponder, jsonString);
+
+        event.preventDefault();
+    });
+
+    function registerResponder(json_response){
+
+        var response= JSON.parse(json_response);
+
+        if(response.status === "MATCH"){
+            window.location.href = "Dashboard.html";
+        }else if(response.status === "NOMATCH"){
+            alert("NO MATCH")
+        }
+
+    }
+
+    function sendPostRequest(uri, responder, json) {
+        var sendUri = encodeURI(uri);
+        req = new XMLHttpRequest();
+        req.open("POST", sendUri, true);
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        req.send(json);
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                switch (req.status) {
+                    case 0:
+                        document.getElementById("notify").innerHTML = "Service unavailable (offline)";
+                        break;
+                    case 200:
+                        responder(req.responseText);
+                        break;
+                    case 400:
+                        document.getElementById("notify").innerHTML = "Service unavailable (error)";
+                        break
+                    default:
+                        document.getElementById("notify").innerHTML = "Service unavailable (unknown: " + req.status + ")";
+                }
+            }
+        };
+    }
+
+</script>
+</body>
+</html>
