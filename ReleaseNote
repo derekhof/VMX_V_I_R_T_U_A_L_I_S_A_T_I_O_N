@@ -1,2 +1,7 @@
+2-1-2018
+Logout function added.
+Following endpoint can be used to logout:
+var uri = "/customer_controller?action=logout";
+
 30-12-2017
 SHA-256 Password hashing + salting added 
