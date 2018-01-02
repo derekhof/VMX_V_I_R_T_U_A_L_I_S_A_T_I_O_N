@@ -1,5 +1,6 @@
 package Controllers;
 
+import Classes.PasswordValidator;
 import Data_Access_Objects.Customer_Dao;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -18,6 +19,7 @@ import java.sql.SQLException;
 
 public class CustomerController extends HttpServlet {
     private final String REQUEST_INVALID_PARMS = "The request contains invalid parameters.";
+    private String PASSWORD_NOT_VALID = "PASSWORD_NOT_VALID";
     private final String DUPLICATE = "DUPLICATE";
     private final String VALID = "VALID";
     private final String MATCH = "MATCH";
@@ -31,6 +33,7 @@ public class CustomerController extends HttpServlet {
         Customer_Dao customer_dao = null;
         String jsonStringRequest;
         String response_msg = null;
+        boolean valid_password = false;
 
         // new instance of customer data access object
         try {
@@ -53,8 +56,18 @@ public class CustomerController extends HttpServlet {
 
                 // check which action is chosen
                 if ((jsonObjectRequest.get("action").toString()).equals("insert")) {
-                    response_msg = customer_dao.insertCustomer(jsonObjectRequest);
-                    System.out.println("Controller: insert action");    // debug comment
+
+                    // validate password
+                    PasswordValidator passwordValidator = new PasswordValidator();
+                    valid_password = passwordValidator.validate(jsonObjectRequest.get("password").toString());
+
+                    if(valid_password == true) {
+                        response_msg = customer_dao.insertCustomer(jsonObjectRequest);
+                        System.out.println("Controller: insert action");    // debug comment
+                    }else{
+                        response_msg = PASSWORD_NOT_VALID;
+                        System.out.println("Controller: password doesn't match with requirements");    // debug comment
+                    }
                 } else if ((jsonObjectRequest.get("action").toString()).equals("login")) {
                     response_msg = customer_dao.loginCustomer(jsonObjectRequest);
                     System.out.println("Controller: login action");    // debug comment
@@ -137,8 +150,6 @@ public class CustomerController extends HttpServlet {
         }
 
     }
-
-
 
     // Method disables a user session
     private void LogoutUser(HttpSession session){

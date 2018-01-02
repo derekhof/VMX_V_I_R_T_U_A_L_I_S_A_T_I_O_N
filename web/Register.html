@@ -15,6 +15,12 @@
     .custom_modal{
         padding-top: 10px;
     }
+
+    .progress_custom{
+        margin-bottom: 0px;
+    }
+
+
 </style>
 <body>
 
@@ -122,19 +128,26 @@
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Password</label>
                     <div class="col-sm-9">
-                        <input type="password" id="password" placeholder="Password" class="form-control custom" required>
+                        <input type="password" id="password" placeholder="Password" class="form-control custom" data-toggle="tooltip" data-placement="right" title="Password requirements:
+                                                                                                                                                                    One digit from 0-9,
+                                                                                                                                                                    One lowercase character,
+                                                                                                                                                                    One uppercase character,
+                                                                                                                                                                    One special symbol and
+                                                                                                                                                                    6-20 characters" required>
+                        <div class="pwstrength_viewport_progress custom"></div>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password" class="col-sm-3 control-label">Confirm password</label>
                     <div class="col-sm-9">
                         <input type="password" id="confirm_password" placeholder="Confirm Password" class="form-control custom" required>
+                        <div style="color:red;"><p id="password_match">&nbsp;</p></div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
                         <div class="col-sm-9 col-sm-offset-3">
-                            <button type="submit" class="btn btn-primary btn-block custom">Register</button>
+                            <button id="register" type="submit" class="btn btn-primary btn-block custom">Register</button>
                         </div>
                     </div>
                 </div>
@@ -164,8 +177,40 @@
 <!-- jQuery & Bootstrap -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/password.js"></script>
 
 <script>
+
+    $( "#confirm_password" ).keyup(function() {
+        var password1 = $("#password").val();
+        var password2 = $("#confirm_password").val();
+        if(password1 === password2) {
+            $("#register").prop('disabled', false);
+            $("#password_match").html("");
+        }else{
+            $("#register").prop('disabled', true);
+            $("#password_match").html("Passwords doesn't match");
+        }
+    });
+
+
+
+    $( "#password" ).keyup(function() {
+        var password1 = $("#password").val();
+        var password2 = $("#confirm_password").val();
+        if(password1 === password2) {
+            $("#register").prop('disabled', false);
+            $("#password_match").html("");
+        }else{
+            $("#register").prop('disabled', true);
+            $("#password_match").html("Passwords doesn't match");
+        }
+    });
+
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
     $( "#register-form" ).submit(function( event ) {
         var company_name = $("#company_name").val();
