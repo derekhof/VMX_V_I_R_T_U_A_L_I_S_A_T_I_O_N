@@ -156,6 +156,7 @@ public class Dashboard_Dao {
     public Request listVMs(Request request){
         // get employee data from db
         Employee employee = dbReadEmployee(request.getUsername());
+        request.setCompany_id(employee.getCompany_id());
 
         // get the hypervisor data from db, depending of the request params
         List<Hypervisor> hypervisors = dbReadHypervisor(CUSTOMER, employee.getCompany_id());
@@ -195,7 +196,7 @@ public class Dashboard_Dao {
         // Check if the if the customer already has a vm with the same name
         Virtual_Machine virtual_machine = dbReadVirtualMachine(request.getVm());
 
-        // TEMP!!!!!!
+        // Create a UUID for the virtual machine
         request.setVm_id(createUUID("virtual_machine"));
 
         // continue if no vm is found with the same name
@@ -541,6 +542,44 @@ public class Dashboard_Dao {
             e.printStackTrace();
         }
         return virtual_machine;
+    }
+
+
+
+    public List<Virtual_Machine> dbReadVirtualMachines(String company_id){
+
+        List<Virtual_Machine> virtual_machines = new ArrayList<Virtual_Machine>();
+        int counter = 0;
+        try {
+            // prepare db statement to retrieve specific virtual machine
+            PreparedStatement preparedStatement = connection
+                    .prepareStatement("SELECT * FROM virtual_machine WHERE company_id =?");
+
+            preparedStatement.setString(1, company_id);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // If db returned data, store data in virtual machine object
+            while (rs.next()) {
+                Virtual_Machine virtual_machine = new Virtual_Machine();
+                virtual_machine.setVm_id(rs.getString("vm_id"));
+                virtual_machine.setVm_name(rs.getString("vm_name"));
+                virtual_machine.setHypervisor_ip(rs.getString("hypervisor_ip"));
+                virtual_machine.setTemplate_id(rs.getString("template_id"));
+                virtual_machine.setCreate_date(rs.getDate("create_date"));
+                virtual_machine.setDelete_date(rs.getDate("delete_date"));
+
+                // Add virtual machine to Array list
+                virtual_machines.add(virtual_machine);
+
+                counter = counter + 1;
+            }
+        } catch (SQLException e) {
+            System.out.println("Dashboard_Dao: virtual machine read query failed");    // debug comment
+            e.printStackTrace();
+        }
+        System.out.println("Dashboard_Dao: " + counter + " Virtual machines records found in db");    // debug comment
+
+        return virtual_machines;
     }
 
     private String dbCreateVirtualMachine(String vm_name, String hypervisor_ip, String template_id, String company_id, String vm_id){

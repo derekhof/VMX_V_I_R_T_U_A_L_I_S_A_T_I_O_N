@@ -1,6 +1,8 @@
 package Controllers;
 
 import Data_Access_Objects.Dashboard_Dao;
+import Models.Hypervisor;
+import Models.Virtual_Machine;
 import Provisioning_API.Provisioning_Server;
 import Models.Request;
 import Models.Response;
@@ -18,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.List;
 
 public class DashboardController extends HttpServlet {
 
@@ -70,6 +73,11 @@ public class DashboardController extends HttpServlet {
                                 System.out.println("Dashboard controller: command list-vms");
                                 request_message = dashboard_dao.listVMs(request_message);
                                 response_message = provisioning_server.listVms(request_message);
+
+                                if(response_message.getStatus().equals(SUCCEED)) {
+                                    // Add additional data from database to response payload
+                                    response_message = ListVmData(response_message, request_message.getCompany_id(), dashboard_dao);
+                                }
                                 break;
                             case "get-vm":
                                 // get data from db for request to provisioning server
@@ -258,6 +266,39 @@ public class DashboardController extends HttpServlet {
         }
         return request_message;
     }
+
+
+    // Method adds additional data from database to received data from provisioning server
+    private Response ListVmData(Response response, String company_id, Dashboard_Dao dashboard_dao){
+        StringBuilder payload = new StringBuilder();
+
+        // parse json payload string
+        try {
+            JSONObject jsonObject = (JSONObject) JSONValue.parseWithException(response.getPayload());
+
+            // get all vm's off the customer
+            List<Virtual_Machine> virtual_machines = dashboard_dao.dbReadVirtualMachines(company_id);
+
+            // loop through the Virtual machines
+            for (Virtual_Machine virtual_machine : virtual_machines) {
+                if(jsonObject.containsKey(virtual_machine.getVm_id())){
+                    virtual_machine.setState(jsonObject.get(virtual_machine.getVm_id()).toString());
+                    payload.append(virtual_machine.toJsonString());
+                }
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+            response.setStatus(FAILED);
+            response.setPayload("Dashboard dao: ListVmData() json format error");
+        }
+
+        // Set Payload
+        response.setPayload(payload.toString());
+
+        return response;
+    }
+
 
 
 }

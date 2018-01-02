@@ -13,6 +13,16 @@ public class Virtual_Machine {
     private String hypervisor_ip;
     private String template_id;
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    private String state;
+
     public String getVm_name() {
         return vm_name;
     }
@@ -69,6 +79,7 @@ public class Virtual_Machine {
         jsonObject.put("template_id", this.template_id);
         jsonObject.put("create_date", this.create_date);
         jsonObject.put("delete_date", this.delete_date);
+        jsonObject.put("state", this.state);
         return jsonObject.toJSONString();
     }
 }

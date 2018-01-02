@@ -41,9 +41,12 @@ public class Sim_Provisioning extends HttpServlet {
                 // check which action is chosen
                 if ((jsonObjectRequest.get("command").toString()).equals("list-vms")) {
 
-                    jsonObjectResponse.put("00a68d9e-439b-4019-8819-2aabc7692536", "off");
-                    jsonObjectResponse.put("sne1", "off");
-                    jsonObjectResponse.put("sne2", "off");
+                    jsonObjectResponse.put("00a68d9e-439b-4019-88e9-2aabc7692536", "off");
+                    jsonObjectResponse.put("1ea18ca0-2adb-4676-a2b1-c7cc600ea961", "off");
+                    jsonObjectResponse.put("50ef0644-e32b-4b54-adef-6ac4a18e8249", "off");
+                    jsonObjectResponse.put("538ee067-a1fd-44fd-8845-e3bc2f622f4d", "on");
+                    jsonObjectResponse.put("bbda1fdf-7661-48a0-a10c-6e7ef5da68df", "on");
+                    jsonObjectResponse.put("c4e5cc7e-453d-465f-a6de-a267d129b0ec", "on");
 
                     System.out.println("simulatie: ");    // debug comment
                 } else if ((jsonObjectRequest.get("command").toString()).equals("start-vm")) {
