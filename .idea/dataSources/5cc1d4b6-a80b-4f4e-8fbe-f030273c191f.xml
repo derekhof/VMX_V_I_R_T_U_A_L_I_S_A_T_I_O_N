@@ -95,7 +95,7 @@
     </column>
     <column id="34" parent="15" name="password">
       <Position>8</Position>
-      <DataType>varchar(45)|0</DataType>
+      <DataType>varchar(150)|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <index id="35" parent="15" name="company_idx">

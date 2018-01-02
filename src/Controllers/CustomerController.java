@@ -17,10 +17,10 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 
 public class CustomerController extends HttpServlet {
-        private final String REQUEST_INVALID_PARMS = "The request contains invalid parameters.";
-        private final String DUPLICATE = "DUPLICATE";
-        private final String VALID = "VALID";
-        private final String MATCH = "MATCH";
+    private final String REQUEST_INVALID_PARMS = "The request contains invalid parameters.";
+    private final String DUPLICATE = "DUPLICATE";
+    private final String VALID = "VALID";
+    private final String MATCH = "MATCH";
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,7 +46,7 @@ public class CustomerController extends HttpServlet {
             System.out.println("Customer controller: following Json String received: " + jsonStringRequest);    // debug comment
         }
 
-        if (jsonStringRequest != null){
+        if (jsonStringRequest != null) {
             try {
                 // Process the data
                 jsonObjectRequest = (JSONObject) JSONValue.parseWithException(jsonStringRequest);
@@ -61,7 +61,7 @@ public class CustomerController extends HttpServlet {
                 }
 
                 // If login successful set session
-                if (response_msg.equals(MATCH)){
+                if (response_msg.equals(MATCH)) {
                     HttpSession session = request.getSession();
                     session.setAttribute("username", jsonObjectRequest.get("username").toString());
                 }
@@ -77,12 +77,12 @@ public class CustomerController extends HttpServlet {
                 }
 
             } catch (ParseException e) {
-            System.out.println("Controller: received data is not of JSON format");    // debug comment
-            e.printStackTrace();
+                System.out.println("Controller: received data is not of JSON format");    // debug comment
+                e.printStackTrace();
             }
 
-        }else {
-            response.sendError(400,REQUEST_INVALID_PARMS);
+        } else {
+            response.sendError(400, REQUEST_INVALID_PARMS);
         }
 
     }
@@ -100,10 +100,9 @@ public class CustomerController extends HttpServlet {
         String validate = DUPLICATE;
 
 
-        if (action != null){
+        if (action != null) {
             switch (action) {
                 case "check_name":
-
                     // new instance of customer data access object
                     try {
                         customer_dao = new Customer_Dao();
@@ -112,13 +111,17 @@ public class CustomerController extends HttpServlet {
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     }
-                        // get dashboard data
-                        validate = customer_dao.validateInsert(company_name);
+                    // get dashboard data
+                    validate = customer_dao.validateInsert(company_name);
+                    break;
+                case "logout":
+                    // Logout action
+                    LogoutUser(request.getSession(false));
                     break;
             }
 
             // If Data is valid generate a username
-            if(validate.equals(VALID)){
+            if (validate.equals(VALID)) {
                 String username = company_name.replaceAll("\\s", "").toLowerCase() + "." + "administrator";
                 jsonObjectResponse.put("username", username);
             }
@@ -129,12 +132,21 @@ public class CustomerController extends HttpServlet {
                 System.out.println("Controller: Json response message: " + jsonObjectResponse.toJSONString());    // debug comment
                 out.println(jsonObjectResponse.toJSONString());
             }
-        }else {
+        } else {
             response.sendError(400, REQUEST_INVALID_PARMS);
         }
 
     }
 
 
+
+    // Method disables a user session
+    private void LogoutUser(HttpSession session){
+        // check if the user has a actual session, if so, go further
+        if (session != null) {
+            System.out.println("Customer controller: User has logged out");
+            session.invalidate();
+        }
+    }
 
 }
