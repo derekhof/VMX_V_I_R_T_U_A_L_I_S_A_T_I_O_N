@@ -12,6 +12,7 @@ public class Virtual_Machine {
     private Date delete_date;
     private String hypervisor_ip;
     private String template_id;
+    private String service_level;
 
     public String getState() {
         return state;
@@ -71,6 +72,14 @@ public class Virtual_Machine {
         this.delete_date = delete_date;
     }
 
+    public String getService_level() {
+        return service_level;
+    }
+
+    public void setService_level(String service_level) {
+        this.service_level = service_level;
+    }
+
     public String toJsonString(){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("vm_name", this.vm_name);
@@ -80,6 +89,7 @@ public class Virtual_Machine {
         jsonObject.put("create_date", this.create_date);
         jsonObject.put("delete_date", this.delete_date);
         jsonObject.put("state", this.state);
+        jsonObject.put("service_level", this.service_level);
         return jsonObject.toJSONString();
     }
 }

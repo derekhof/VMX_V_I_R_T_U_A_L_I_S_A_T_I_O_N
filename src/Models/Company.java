@@ -2,6 +2,8 @@ package Models;
 
 import org.json.simple.JSONObject;
 
+import java.sql.Date;
+
 public class Company
 {
     private String company_id;
@@ -11,6 +13,7 @@ public class Company
     private String address;
     private int housenumber;
     private String website;
+    private Date create_date;
 
 
     public String getCompany_id() {
@@ -70,6 +73,14 @@ public class Company
         this.website = website;
     }
 
+    public Date getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(Date create_date) {
+        this.create_date = create_date;
+    }
+
     // Method returns a json string of the object
     public String toJsonString(){
         JSONObject jsonObject = new JSONObject();
@@ -80,7 +91,6 @@ public class Company
         jsonObject.put("address", this.address);
         jsonObject.put("housenumber", this.housenumber);
         jsonObject.put("website", this.website);
-
         return jsonObject.toJSONString();
     }
 

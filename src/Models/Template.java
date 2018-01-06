@@ -9,8 +9,16 @@ public class Template {
     private String operating_system;
     private float memory;
     private float diskspace;
+    private float price;
     private String specification;
 
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 
     public String getTemplate_id() {
         return template_id;

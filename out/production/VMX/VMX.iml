@@ -11,6 +11,7 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/lib" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -27,6 +28,16 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.0.M22" level="application_server_libraries" />
     <orderEntry type="library" exported="" name="lib " level="project" />
-    <orderEntry type="library" name="libraries" level="project" />
+    <orderEntry type="library" exported="" name="libraries" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library name="Itext">
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Desktop/itextpdf-5.1.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="itextpdf-5.1.2-sources" level="project" />
   </component>
 </module>

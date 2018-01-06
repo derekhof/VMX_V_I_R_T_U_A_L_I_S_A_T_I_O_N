@@ -4,9 +4,7 @@
       <root url="file://$PROJECT_DIR$/.idea/libraries" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$PROJECT_DIR$/lib/jBCrypt-0.4-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
     <jarDirectory url="file://$PROJECT_DIR$/.idea/libraries" recursive="false" />
   </library>
 </component>

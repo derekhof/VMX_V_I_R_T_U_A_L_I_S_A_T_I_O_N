@@ -370,7 +370,7 @@ public class Dashboard_Dao {
     }
 
     // Method returns data of company from db
-    private Company dbReadCompany(String company_id) {
+    public Company dbReadCompany(String company_id) {
         Company company = new Company();
 
         try {
@@ -383,7 +383,7 @@ public class Dashboard_Dao {
 
             // check if db returned data
             if (rs.next()) {
-                System.out.println("Dashboard_Dao: Employee records found in db");    // debug comment
+                System.out.println("Dashboard_Dao: Company records found in db");    // debug comment
 
                 company.setCompany_id(rs.getString("company_id"));
                 company.setCompany_name(rs.getString("company_name"));
@@ -392,6 +392,7 @@ public class Dashboard_Dao {
                 company.setAddress(rs.getString("address"));
                 company.setHousenumber(rs.getInt("housenumber"));
                 company.setWebsite(rs.getString("website"));
+                company.setCreate_date(rs.getDate("create_date"));
             }
             else{
                 System.out.println("Dashboard_Dao: No Company records found");    // debug comment
@@ -423,6 +424,7 @@ public class Dashboard_Dao {
             // check if db returned data
             while (rs.next()) {
                 Template template = new Template();
+                template.setPrice(rs.getFloat("price"));
                 template.setTemplate_id(rs.getString("template_id"));
                 template.setOperating_system(rs.getString("operating_system"));
                 template.setMemory(rs.getFloat("memory"));
@@ -567,6 +569,7 @@ public class Dashboard_Dao {
                 virtual_machine.setTemplate_id(rs.getString("template_id"));
                 virtual_machine.setCreate_date(rs.getDate("create_date"));
                 virtual_machine.setDelete_date(rs.getDate("delete_date"));
+                virtual_machine.setService_level(rs.getString("service_level"));
 
                 // Add virtual machine to Array list
                 virtual_machines.add(virtual_machine);
@@ -637,6 +640,46 @@ public class Dashboard_Dao {
         System.out.println("Customer_Dao: Insert data new generated UUID: " + UUID);    // debug comment
 
         return UUID;
+    }
+
+
+
+
+    // Method returns all service levels from db
+    public List<Service_Level> dbReadServiceLevels() {
+
+        // define a new service level list
+        List<Service_Level> service_levels = new ArrayList<Service_Level>();
+
+        // If option equals CUSTOMER, return the hypervisor(s) related to the customer. Otherwise return unused hypervisors
+        PreparedStatement preparedStatement;
+        try {
+            // prepare db statement
+            preparedStatement = connection
+                    .prepareStatement("SELECT * FROM service_level");
+
+            ResultSet rs = preparedStatement.executeQuery();
+            System.out.println("Dashboard dao: get service levels data from db");
+
+            // check if db returned data
+            while (rs.next()) {
+                Service_Level service_level = new Service_Level();
+                service_level.setName(rs.getString("name"));
+                service_level.setCommision(rs.getInt("commision"));
+
+
+                // print the retrieved hypervisors
+                System.out.println("Dashboard_Dao: following template found in db: " + service_level.toJsonString());    // debug comment
+
+                // add the hypervisor to the list
+                service_levels.add(service_level);
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Dashboard_Dao: Service_level query failed");    // debug comment
+            e.printStackTrace();
+        }
+        return service_levels;
     }
 
 }
