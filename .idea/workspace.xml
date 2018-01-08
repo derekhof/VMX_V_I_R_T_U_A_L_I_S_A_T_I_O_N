@@ -10,47 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e89152e5-93b7-45e6-9759-d539bc005640" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/itextpdf_5_1_2_sources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/Bill.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/Service_Level.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Controllers/DashboardController.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Controllers/DashboardController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Data_Access_Objects/Dashboard_Dao.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Data_Access_Objects/Dashboard_Dao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Company.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Template.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Template.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Virtual_Machine.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Virtual_Machine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Request.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Models/Request.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Controllers/DashboardController.class" afterPath="$PROJECT_DIR$/out/production/VMX/Controllers/DashboardController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Data_Access_Objects/Dashboard_Dao.class" afterPath="$PROJECT_DIR$/out/production/VMX/Data_Access_Objects/Dashboard_Dao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Models/Company.class" afterPath="$PROJECT_DIR$/out/production/VMX/Models/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Models/Template.class" afterPath="$PROJECT_DIR$/out/production/VMX/Models/Template.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Models/Virtual_Machine.class" afterPath="$PROJECT_DIR$/out/production/VMX/Models/Virtual_Machine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib_.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libraries.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libraries.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/Models/Request.class" afterPath="$PROJECT_DIR$/out/production/VMX/Models/Request.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VMX.iml" afterPath="$PROJECT_DIR$/VMX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/Register.html" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/Register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/libraries/lib_.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/libraries/lib_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/libraries/libraries.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/libraries/libraries.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/VMX.iml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/VMX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/lib_.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/lib_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/libraries.xml" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/libraries.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/web/Register.html" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/web/Register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" afterPath="$PROJECT_DIR$/out/production/VMX/.idea/dataSources/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/.idea/libraries/lib_.xml" afterPath="$PROJECT_DIR$/out/production/VMX/.idea/libraries/lib_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/.idea/libraries/libraries.xml" afterPath="$PROJECT_DIR$/out/production/VMX/.idea/libraries/libraries.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/ReleaseNote" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/ReleaseNote" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/VMX/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/VMX.iml" afterPath="$PROJECT_DIR$/out/production/VMX/VMX.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/lib_.xml" afterPath="$PROJECT_DIR$/out/production/VMX/lib_.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/libraries.xml" afterPath="$PROJECT_DIR$/out/production/VMX/libraries.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/web/Register.html" afterPath="$PROJECT_DIR$/out/production/VMX/web/Register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/VMX/ReleaseNote" afterPath="$PROJECT_DIR$/out/production/VMX/ReleaseNote" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/DashboardController.java" afterPath="$PROJECT_DIR$/src/Controllers/DashboardController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java" afterPath="$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Company.java" afterPath="$PROJECT_DIR$/src/Models/Company.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Template.java" afterPath="$PROJECT_DIR$/src/Models/Template.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Virtual_Machine.java" afterPath="$PROJECT_DIR$/src/Models/Virtual_Machine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Register.html" afterPath="$PROJECT_DIR$/web/Register.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Request.java" afterPath="$PROJECT_DIR$/src/Models/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java" afterPath="$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,43 +96,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dashboard_Dao.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dashboard_Dao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6409">
-              <caret line="385" column="58" lean-forward="false" selection-start-line="385" selection-start-column="58" selection-end-line="385" selection-end-column="58" />
+            <state relative-caret-position="8246">
+              <caret line="609" column="19" lean-forward="false" selection-start-line="609" selection-start-column="19" selection-end-line="609" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1515185221587" expanded="true" signature="13298:13338" ph="SELECT * FRO... employee" />
-                <marker date="1515185221587" expanded="true" signature="14608:14649" ph="SELECT * FRO... company" />
-                <marker date="1515185221587" expanded="true" signature="14614:14615" ph="SELECT * FRO... company" />
-                <marker date="1515185221587" expanded="true" signature="16296:16318" ph="SELECT * FRO... template" />
-                <marker date="1515185221587" expanded="true" signature="18246:18288" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515185221587" expanded="true" signature="18246:18291" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515185221587" expanded="true" signature="18531:18580" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515185221587" expanded="true" signature="19910:19967" ph="UPDATE hyper... " />
-                <marker date="1515185221587" expanded="true" signature="20825:20869" ph="SELECT * FRO... virtual_machine" />
-                <marker date="1515185221587" expanded="true" signature="22375:22424" ph="SELECT * FRO... virtual_machine" />
-                <marker date="1515185221587" expanded="true" signature="24066:24085" ph="INSERT INTO virtual... " />
-                <marker date="1515185221587" expanded="true" signature="24066:24093" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515185221587" expanded="true" signature="24066:24168" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515185221587" expanded="true" signature="24066:24170" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515185221587" expanded="true" signature="25117:25175" ph="UPDATE virtu... " />
-                <marker date="1515185221587" expanded="true" signature="26485:26512" ph="SELECT * FRO... service_level" />
+                <marker date="1515435549501" expanded="true" signature="14022:14062" ph="SELECT * FRO... employee" />
+                <marker date="1515435549501" expanded="true" signature="15332:15373" ph="SELECT * FRO... company" />
+                <marker date="1515435549501" expanded="true" signature="15338:15339" ph="SELECT * FRO... company" />
+                <marker date="1515435549501" expanded="true" signature="17020:17042" ph="SELECT * FRO... template" />
+                <marker date="1515435549501" expanded="true" signature="18970:19012" ph="SELECT * FRO... hypervisor" />
+                <marker date="1515435549501" expanded="true" signature="18970:19015" ph="SELECT * FRO... hypervisor" />
+                <marker date="1515435549501" expanded="true" signature="19255:19304" ph="SELECT * FRO... hypervisor" />
+                <marker date="1515435549501" expanded="true" signature="20634:20691" ph="UPDATE hyper... " />
+                <marker date="1515435549501" expanded="true" signature="21549:21593" ph="SELECT * FRO... virtual_machine" />
+                <marker date="1515435549501" expanded="true" signature="23180:23229" ph="SELECT * FRO... virtual_machine" />
+                <marker date="1515435549501" expanded="true" signature="24893:24912" ph="INSERT INTO virtual... " />
+                <marker date="1515435549501" expanded="true" signature="24893:24920" ph="INSERT INTO virtual_machine... " />
+                <marker date="1515435549501" expanded="true" signature="24893:25012" ph="INSERT INTO virtual_machine... " />
+                <marker date="1515435549501" expanded="true" signature="24893:25014" ph="INSERT INTO virtual_machine... " />
+                <marker date="1515435549501" expanded="true" signature="26020:26078" ph="UPDATE virtu... " />
+                <marker date="1515435549501" expanded="true" signature="27388:27415" ph="SELECT * FRO... service_level" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="447" column="0" lean-forward="false" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
+            <state relative-caret-position="566">
+              <caret line="106" column="80" lean-forward="true" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#16355#16365#0" expanded="true" />
-                <element signature="e#21549#21555#0" expanded="true" />
+                <element signature="e#16807#16817#0" expanded="true" />
+                <element signature="e#22001#22007#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Provisioning_Server.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template" pinned="false" current-in-tab="false">
+        <entry file="das://table:/f3d60194/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f/hva_vmx.template">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+              <folding>
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,10 +184,9 @@
         <entry file="file://$PROJECT_DIR$/src/Models/Virtual_Machine.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
-                <element signature="e#1593#1594#0" expanded="true" />
-                <element signature="e#1643#1644#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -293,12 +298,10 @@
         <option value="$PROJECT_DIR$/src/Models/Templates.java" />
         <option value="$PROJECT_DIR$/src/Provisioning_API/Request.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/Models/Request.java" />
         <option value="$PROJECT_DIR$/src/Models/Response.java" />
         <option value="$PROJECT_DIR$/src/Data_Access_Objects/DBConnectionManager.java" />
         <option value="$PROJECT_DIR$/.idea/artifacts/vmx.xml" />
         <option value="$PROJECT_DIR$/.idea/artifacts/VMX_war_exploded.xml" />
-        <option value="$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java" />
         <option value="$PROJECT_DIR$/src/Data_Access_Objects/Customer_Dao.java" />
         <option value="$PROJECT_DIR$/web/Dashboard.html" />
         <option value="$PROJECT_DIR$/src/Controllers/Sim_Provisioning.java" />
@@ -316,9 +319,11 @@
         <option value="$PROJECT_DIR$/src/Models/Service_Level.java" />
         <option value="$PROJECT_DIR$/src/Models/Virtual_Machine.java" />
         <option value="$PROJECT_DIR$/src/Models/Company.java" />
-        <option value="$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java" />
         <option value="$PROJECT_DIR$/src/Models/Bill.java" />
+        <option value="$PROJECT_DIR$/src/Models/Request.java" />
         <option value="$PROJECT_DIR$/src/Controllers/DashboardController.java" />
+        <option value="$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java" />
+        <option value="$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java" />
       </list>
     </option>
   </component>
@@ -349,8 +354,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1998" />
-    <option name="y" value="-17" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -500,6 +505,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -583,10 +592,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -597,7 +602,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VMX - kopie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -868,14 +873,19 @@
       <workItem from="1515172523804" duration="22000" />
       <workItem from="1515182056002" duration="12354000" />
       <workItem from="1515231338919" duration="2691000" />
+      <workItem from="1515237534518" duration="1462000" />
+      <workItem from="1515326209264" duration="704000" />
+      <workItem from="1515331434361" duration="8000" />
+      <workItem from="1515435042677" duration="514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262110000" />
+    <option name="totallyTimeSpent" value="264798000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -887,20 +897,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39565217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14498934" sideWeight="0.5845324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15138593" sideWeight="0.5845324" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1369936" sideWeight="0.41546762" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15245202" sideWeight="0.49434572" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1050,13 +1060,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/artifacts/vmx.xml" />
-    <entry file="das://table:/f3d60194/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f/hva_vmx.template">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/f3d60194/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f/hva_vmx.virtual_machine">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1082,20 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1059">
-          <caret line="247" column="0" lean-forward="true" selection-start-line="247" selection-start-column="0" selection-end-line="247" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1213,32 +1202,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Bill_Date.java" />
-    <entry file="file://$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6409">
-          <caret line="385" column="58" lean-forward="false" selection-start-line="385" selection-start-column="58" selection-end-line="385" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1515185221587" expanded="true" signature="13298:13338" ph="SELECT * FRO... employee" />
-            <marker date="1515185221587" expanded="true" signature="14608:14649" ph="SELECT * FRO... company" />
-            <marker date="1515185221587" expanded="true" signature="14614:14615" ph="SELECT * FRO... company" />
-            <marker date="1515185221587" expanded="true" signature="16296:16318" ph="SELECT * FRO... template" />
-            <marker date="1515185221587" expanded="true" signature="18246:18288" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515185221587" expanded="true" signature="18246:18291" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515185221587" expanded="true" signature="18531:18580" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515185221587" expanded="true" signature="19910:19967" ph="UPDATE hyper... " />
-            <marker date="1515185221587" expanded="true" signature="20825:20869" ph="SELECT * FRO... virtual_machine" />
-            <marker date="1515185221587" expanded="true" signature="22375:22424" ph="SELECT * FRO... virtual_machine" />
-            <marker date="1515185221587" expanded="true" signature="24066:24085" ph="INSERT INTO virtual... " />
-            <marker date="1515185221587" expanded="true" signature="24066:24093" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515185221587" expanded="true" signature="24066:24168" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515185221587" expanded="true" signature="24066:24170" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515185221587" expanded="true" signature="25117:25175" ph="UPDATE virtu... " />
-            <marker date="1515185221587" expanded="true" signature="26485:26512" ph="SELECT * FRO... service_level" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Hypervisor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1251,17 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-183">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Virtual_Machine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,14 +1241,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
+    <entry file="file://$PROJECT_DIR$/src/Models/Virtual_Machine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="447" column="0" lean-forward="false" selection-start-line="447" selection-start-column="0" selection-end-line="447" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#16355#16365#0" expanded="true" />
-            <element signature="e#21549#21555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f3d60194/5cc1d4b6-a80b-4f4e-8fbe-f030273c191f/hva_vmx.template">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Provisioning_API/Provisioning_Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="106" column="80" lean-forward="true" selection-start-line="106" selection-start-column="73" selection-end-line="106" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16807#16817#0" expanded="true" />
+            <element signature="e#22001#22007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8246">
+          <caret line="609" column="19" lean-forward="false" selection-start-line="609" selection-start-column="19" selection-end-line="609" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1515435549501" expanded="true" signature="14022:14062" ph="SELECT * FRO... employee" />
+            <marker date="1515435549501" expanded="true" signature="15332:15373" ph="SELECT * FRO... company" />
+            <marker date="1515435549501" expanded="true" signature="15338:15339" ph="SELECT * FRO... company" />
+            <marker date="1515435549501" expanded="true" signature="17020:17042" ph="SELECT * FRO... template" />
+            <marker date="1515435549501" expanded="true" signature="18970:19012" ph="SELECT * FRO... hypervisor" />
+            <marker date="1515435549501" expanded="true" signature="18970:19015" ph="SELECT * FRO... hypervisor" />
+            <marker date="1515435549501" expanded="true" signature="19255:19304" ph="SELECT * FRO... hypervisor" />
+            <marker date="1515435549501" expanded="true" signature="20634:20691" ph="UPDATE hyper... " />
+            <marker date="1515435549501" expanded="true" signature="21549:21593" ph="SELECT * FRO... virtual_machine" />
+            <marker date="1515435549501" expanded="true" signature="23180:23229" ph="SELECT * FRO... virtual_machine" />
+            <marker date="1515435549501" expanded="true" signature="24893:24912" ph="INSERT INTO virtual... " />
+            <marker date="1515435549501" expanded="true" signature="24893:24920" ph="INSERT INTO virtual_machine... " />
+            <marker date="1515435549501" expanded="true" signature="24893:25012" ph="INSERT INTO virtual_machine... " />
+            <marker date="1515435549501" expanded="true" signature="24893:25014" ph="INSERT INTO virtual_machine... " />
+            <marker date="1515435549501" expanded="true" signature="26020:26078" ph="UPDATE virtu... " />
+            <marker date="1515435549501" expanded="true" signature="27388:27415" ph="SELECT * FRO... service_level" />
           </folding>
         </state>
       </provider>

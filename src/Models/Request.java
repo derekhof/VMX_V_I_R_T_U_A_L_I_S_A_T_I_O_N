@@ -12,6 +12,7 @@ public class Request {
     private String vm;
     private String vm_id;
     private String status_request;
+    private String service_level;
 
     public String getStatus_request() {
         return status_request;
@@ -76,6 +77,14 @@ public class Request {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getService_level() {
+        return service_level;
+    }
+
+    public void setService_level(String service_level) {
+        this.service_level = service_level;
     }
 
     // method returns a json string of the class

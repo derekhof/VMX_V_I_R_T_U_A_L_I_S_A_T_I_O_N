@@ -214,6 +214,11 @@ public class DashboardController extends HttpServlet {
                                 System.out.println("Dashboard controller: command get_templates");
                                 response_message = dashboard_dao.getTemplateData(request_message);
                                 break;
+
+                            case "get-service-levels":
+                                System.out.println("Dashboard controller: command service_levels");
+                                response_message = dashboard_dao.getServiceLevelData(request_message);
+                                break;
                             case "get-bill":
                                 System.out.println("Dashboard controller: command get_bill");
 
@@ -273,6 +278,10 @@ public class DashboardController extends HttpServlet {
 
         if (jsonObject.containsKey("vm")) {
             request_message.setVm(jsonObject.get("vm").toString());
+        }
+
+        if(jsonObject.containsKey("service_level")){
+            request_message.setService_level(jsonObject.get("service_level").toString());
         }
         return request_message;
     }

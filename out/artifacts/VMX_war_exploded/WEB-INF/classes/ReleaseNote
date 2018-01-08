@@ -1,3 +1,6 @@
+2-1-2018 String password
+Strong password functionality added to register form and backend
+
 2-1-2018
 List-vms endpoint response changed. response payload format:
 {\"vm_id\":\"00a68d9e-439b-4019-88e9-2aabc7692536\",\"hypervisor_ip\":\"10.100.10.5\",\"delete_date\":\"2017-12-29\",\"template_id\":\"linux_1\",\"state\":\"off\",\"create_date\":\"2017-12-10\",\"vm_name\":\"derek4\"}

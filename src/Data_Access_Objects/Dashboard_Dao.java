@@ -130,13 +130,34 @@ public class Dashboard_Dao {
         return response;
     }
 
+    // Method returns vm service levels from db
+    public Response getServiceLevelData(Request request){
+
+        // get the template data from db, depending of the request params
+        List<Service_Level> service_levels = dbReadServiceLevels();
+
+        // create a payload for the response
+        StringBuilder payload = new StringBuilder();
+
+        // loop through the hypervisors
+        for (Service_Level service_level : service_levels) {
+            // add the hypervisor to the response payload
+            payload.append(service_level.toJsonString());
+        }
+
+        response.setStatus(SUCCEED);
+        response.setPayload(payload.toString());
+
+        return response;
+    }
+
     // Method creates new Virtual machine record in the db
     public Response CreateNewVM(Request request){
         // Get customer data
         Employee employee = dbReadEmployee(request.getUsername());
         System.out.println("Dashboard controller: get employee data from db");
 
-        response.setStatus(dbCreateVirtualMachine(request.getVm(), request.getHypervisor(), request.getParams(), employee.getCompany_id(), request.getVm_id()));
+        response.setStatus(dbCreateVirtualMachine(request.getVm_id(), request.getHypervisor(), request.getParams(), employee.getCompany_id(), request.getVm(), request.getService_level()));
         return response;
     }
 
@@ -536,6 +557,7 @@ public class Dashboard_Dao {
                 virtual_machine.setTemplate_id(rs.getString("template_id"));
                 virtual_machine.setCreate_date(rs.getDate("create_date"));
                 virtual_machine.setDelete_date(rs.getDate("delete_date"));
+                virtual_machine.setService_level(rs.getString("service_level"));
             }else{
                 System.out.println("Dashboard_Dao: No Virtual machine records found");    // debug comment
             }
@@ -585,17 +607,18 @@ public class Dashboard_Dao {
         return virtual_machines;
     }
 
-    private String dbCreateVirtualMachine(String vm_name, String hypervisor_ip, String template_id, String company_id, String vm_id){
+    private String dbCreateVirtualMachine(String vm_name, String hypervisor_ip, String template_id, String company_id, String vm_id, String service_level){
         try {
             // prepare db statement to retrieve specific company
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("INSERT INTO virtual_machine (vm_name, hypervisor_ip, template_id, company_id, vm_id)VALUES (?,?,?,?,?)");
+                    .prepareStatement("INSERT INTO virtual_machine (vm_name, hypervisor_ip, template_id, company_id, vm_id, service_level)VALUES (?,?,?,?,?,?)");
 
             preparedStatement.setString(1, vm_name);
             preparedStatement.setString(2, hypervisor_ip);
             preparedStatement.setString(3, template_id);
             preparedStatement.setString(4, company_id);
             preparedStatement.setString(5, vm_id);
+            preparedStatement.setString(6, service_level);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {

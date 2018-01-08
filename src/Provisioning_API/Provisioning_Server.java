@@ -97,6 +97,12 @@ public class Provisioning_Server {
 
         // print action
         System.out.println("Provisioning server: create new vm action");
+
+        // provisioning server only know vm_id's, therefore switch vm_id and vm_name
+        String vm_name = request.getVm();
+        request.setVm(request.getVm_id());
+        request.setVm(vm_name);
+
         // send request to provisioning server
         String response_payload = sendRequest(request);
 
