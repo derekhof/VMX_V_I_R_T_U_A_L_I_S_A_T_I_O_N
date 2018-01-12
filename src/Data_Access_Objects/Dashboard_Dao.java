@@ -3,6 +3,7 @@ package Data_Access_Objects;
 import Models.*;
 import Models.Request;
 import Models.Response;
+import org.json.simple.JSONArray;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -78,15 +79,15 @@ public class Dashboard_Dao {
         List<Hypervisor> hypervisors = dbReadHypervisor(request.getParams(), employee.getCompany_id());
 
         // create a payload for the response
-        StringBuilder payload = new StringBuilder();
+        JSONArray jsonArray = new JSONArray();
 
         // loop through the hypervisors
         for (Hypervisor hypervisor : hypervisors) {
             // add the hypervisor to the response payload
-            payload.append(hypervisor.toJsonString());
+            jsonArray.add(hypervisor.toJsonString());
         }
         response.setStatus(SUCCEED);
-        response.setPayload(payload.toString());
+        response.setPayload(jsonArray.toJSONString());
 
         return response;
     }
@@ -116,16 +117,16 @@ public class Dashboard_Dao {
         List<Template> templates = dbReadTemplates();
 
         // create a payload for the response
-        StringBuilder payload = new StringBuilder();
+        JSONArray jsonArray = new JSONArray();
 
         // loop through the hypervisors
         for (Template template : templates) {
             // add the hypervisor to the response payload
-            payload.append(template.toJsonString());
+            jsonArray.add(template.toJsonString());
         }
 
         response.setStatus(SUCCEED);
-        response.setPayload(payload.toString());
+        response.setPayload(jsonArray.toJSONString());
 
         return response;
     }
@@ -137,16 +138,16 @@ public class Dashboard_Dao {
         List<Service_Level> service_levels = dbReadServiceLevels();
 
         // create a payload for the response
-        StringBuilder payload = new StringBuilder();
+        JSONArray jsonArray = new JSONArray();
 
         // loop through the hypervisors
         for (Service_Level service_level : service_levels) {
             // add the hypervisor to the response payload
-            payload.append(service_level.toJsonString());
+            jsonArray.add(service_level.toJsonString());
         }
 
         response.setStatus(SUCCEED);
-        response.setPayload(payload.toString());
+        response.setPayload(jsonArray.toJSONString());
 
         return response;
     }
@@ -215,13 +216,20 @@ public class Dashboard_Dao {
         Employee employee = dbReadEmployee(request.getUsername());
 
         // Check if the if the customer already has a vm with the same name
-        Virtual_Machine virtual_machine = dbReadVirtualMachine(request.getVm());
+        List<Virtual_Machine> virtual_machines = dbReadVirtualMachines(employee.getCompany_id());
+
+        boolean duplicate = false;
+        for(Virtual_Machine virtual_machine: virtual_machines){
+            if (virtual_machine.getVm_name().equals(request.getVm())){
+                duplicate = true;
+            }
+        }
 
         // Create a UUID for the virtual machine
         request.setVm_id(createUUID("virtual_machine"));
 
         // continue if no vm is found with the same name
-        if(virtual_machine.getVm_name() == null) {
+        if(duplicate == false) {
 
             // get the hypervisor data from db, depending of the request params
             List<Hypervisor> hypervisors = dbReadHypervisor(CUSTOMER, employee.getCompany_id());
@@ -567,8 +575,6 @@ public class Dashboard_Dao {
         }
         return virtual_machine;
     }
-
-
 
     public List<Virtual_Machine> dbReadVirtualMachines(String company_id){
 

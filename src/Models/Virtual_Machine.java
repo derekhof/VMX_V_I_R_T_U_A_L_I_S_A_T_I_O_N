@@ -92,4 +92,21 @@ public class Virtual_Machine {
         jsonObject.put("service_level", this.service_level);
         return jsonObject.toJSONString();
     }
+
+    public JSONObject toJsonObject(){
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("vm_name", this.vm_name);
+        jsonObject.put("vm_id", this.vm_id);
+        jsonObject.put("hypervisor_ip", this.hypervisor_ip);
+        jsonObject.put("template_id", this.template_id);
+        jsonObject.put("create_date", this.create_date);
+        jsonObject.put("delete_date", this.delete_date);
+        jsonObject.put("state", this.state);
+        jsonObject.put("service_level", this.service_level);
+        return jsonObject;
+
+
+
+    }
 }

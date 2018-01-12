@@ -69,6 +69,16 @@ public class Template {
         jsonObject.put("specification", this.specification);
         return jsonObject.toJSONString();
     }
+
+    public JSONObject toJsonObject(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("template_id", this.template_id);
+        jsonObject.put("operating_system", this.operating_system);
+        jsonObject.put("memory", this.memory);
+        jsonObject.put("diskspace", this.diskspace);
+        jsonObject.put("specification", this.specification);
+        return jsonObject;
+    }
 }
 
 

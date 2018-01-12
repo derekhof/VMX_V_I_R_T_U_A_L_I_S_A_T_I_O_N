@@ -1,21 +1,21 @@
 package Controllers;
 
 import Data_Access_Objects.Dashboard_Dao;
+import Invoice.Invoice;
 import Models.*;
 import Provisioning_API.Provisioning_Server;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -226,6 +226,22 @@ public class DashboardController extends HttpServlet {
                                     getBillingDates(request_message, response_message, dashboard_dao);
                                 }else{
                                     getMonthBill(response_message, request_message, dashboard_dao);
+
+                                    // call invoice api to generate a pdf
+                                    Invoice invoice = new Invoice();
+                                    byte[] pdf = invoice.sendRequest(response_message);
+
+                                    // adjust response entity
+                                    response.reset();
+                                    response.setContentType("application/pdf");
+                                    response.setHeader("Content-Disposition", "inline; filename=bill.pdf");
+
+                                    // write output stream to front-end
+                                    ServletOutputStream out = response.getOutputStream();
+                                    response.setContentLength(pdf.length);
+                                    out.write(pdf);
+                                    out.flush();
+                                    out.close();
                                 }
                                 break;
                         }
@@ -289,11 +305,12 @@ public class DashboardController extends HttpServlet {
 
     // Method adds additional data from database to received data from provisioning server
     private Response ListVmData(Response response, String company_id, Dashboard_Dao dashboard_dao) {
-        StringBuilder payload = new StringBuilder();
+        JSONArray jsonArray = new JSONArray();
 
         // parse json payload string
         try {
             JSONObject jsonObject = (JSONObject) JSONValue.parseWithException(response.getPayload());
+
 
             // get all vm's off the customer
             List<Virtual_Machine> virtual_machines = dashboard_dao.dbReadVirtualMachines(company_id);
@@ -302,7 +319,7 @@ public class DashboardController extends HttpServlet {
             for (Virtual_Machine virtual_machine : virtual_machines) {
                 if (jsonObject.containsKey(virtual_machine.getVm_id())) {
                     virtual_machine.setState(jsonObject.get(virtual_machine.getVm_id()).toString());
-                    payload.append(virtual_machine.toJsonString());
+                    jsonArray.add(virtual_machine.toJsonObject());
                 }
             }
 
@@ -313,7 +330,7 @@ public class DashboardController extends HttpServlet {
         }
 
         // Set Payload
-        response.setPayload(payload.toString());
+        response.setPayload(jsonArray.toJSONString());
 
         return response;
     }
@@ -549,16 +566,16 @@ public class DashboardController extends HttpServlet {
                 }
             }
 
-            // Create payload for response message
+            // Create String builder for response message
             // intialize a stringbuilder for payload
-            StringBuilder payload = new StringBuilder();
+            JSONArray jsonArray = new JSONArray();
 
             // loop through the bills
             for (Bill bill : billings) {
-                payload.append(bill.toJsonString());
+                jsonArray.add(bill.toJsonObject());
             }
 
-            response_message.setPayload(payload.toString());
+            response_message.setPayload(jsonArray.toJSONString());
             response_message.setStatus(SUCCEED);
 
         } catch (java.text.ParseException e) {

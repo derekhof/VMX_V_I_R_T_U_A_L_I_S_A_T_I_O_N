@@ -29,4 +29,11 @@ public class Service_Level {
         jsonObject.put("commision", this.commision);
         return jsonObject.toJSONString();
     }
+
+    public JSONObject toJsonObject(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name", this.name);
+        jsonObject.put("commision", this.commision);
+        return jsonObject;
+    }
 }

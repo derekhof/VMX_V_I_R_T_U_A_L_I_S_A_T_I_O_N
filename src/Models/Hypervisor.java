@@ -1,5 +1,6 @@
 package Models;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 public class Hypervisor {
@@ -50,5 +51,14 @@ public class Hypervisor {
         jsonObject.put("company_id", this.company_id);
 
         return jsonObject.toJSONString();
+    }
+
+    public JSONObject toJsonObject(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("ip_address", this.ip_address);
+        jsonObject.put("diskspace", this.diskspace);
+        jsonObject.put("memory", this.memory);
+        jsonObject.put("company_id", this.company_id);
+        return jsonObject;
     }
 }

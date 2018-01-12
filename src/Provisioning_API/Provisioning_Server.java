@@ -25,9 +25,6 @@ public class Provisioning_Server {
 
     // Method returns a list of all the vm's of a specific customer
     public Response listVms(Request request){
-
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: new list vm action");
         // send request to provisioning server
@@ -41,8 +38,6 @@ public class Provisioning_Server {
 
     // Method returns a specific vm of a customer
     public Response getVm(Request request){
-
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
         // print action
         System.out.println("Provisioning server: new get vm action");
         // send request to provisioning server
@@ -60,8 +55,6 @@ public class Provisioning_Server {
 
     // Method powers-ups a specific vm
     public Response startVm(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: start vm action");
         // send request to provisioning server
@@ -75,9 +68,7 @@ public class Provisioning_Server {
 
     // Method Stops a specific vm
     public Response stopVm(Request request) {
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
-        // print action
+         // print action
         System.out.println("Provisioning server: stop get vm action");
         // send request to provisioning server
         String response_payload = sendRequest(request);
@@ -93,15 +84,15 @@ public class Provisioning_Server {
 
     // Method creates a new vm
     public Response newVm(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: create new vm action");
 
         // provisioning server only know vm_id's, therefore switch vm_id and vm_name
         String vm_name = request.getVm();
         request.setVm(request.getVm_id());
-        request.setVm(vm_name);
+        request.setVm_id(vm_name);
+
+        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
 
         // send request to provisioning server
         String response_payload = sendRequest(request);
@@ -113,9 +104,7 @@ public class Provisioning_Server {
     }
 
     public Response deleteVm(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
-        // print action
+           // print action
         System.out.println("Provisioning server: delete vm action");
         // send request to provisioning server
         String response_payload = sendRequest(request);
@@ -129,8 +118,6 @@ public class Provisioning_Server {
 
     // Method creates a backup of a specific vm
     public Response backupVm(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: backup vm action");
         // send request to provisioning server
@@ -145,8 +132,6 @@ public class Provisioning_Server {
 
     //Method restores a specific vm
     public Response restoreVM(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: restore vm action");
         // send request to provisioning server
@@ -161,8 +146,6 @@ public class Provisioning_Server {
 
     // Method modifies a specific vm
     public Response modifyVm(Request request){
-        System.out.println("Provisioning server: following request is send: " + request.toJsonString());
-
         // print action
         System.out.println("Provisioning server: modfiy vm action");
         // send request to provisioning server

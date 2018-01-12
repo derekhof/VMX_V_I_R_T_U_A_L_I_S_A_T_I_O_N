@@ -80,16 +80,16 @@ public class Bill {
         this.commision = commision;
     }
 
-    public String toJsonString(){
+    public JSONObject toJsonObject(){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("vm_name",this.vm_name);
         jsonObject.put("operating_system",this.operating_system);
         jsonObject.put("price",this.price);
-        jsonObject.put("Service level", this.service_level);
+        jsonObject.put("service_level", this.service_level);
         jsonObject.put("commision", this.commision);
         jsonObject.put("billing_period", this.billing_period_date);
         jsonObject.put("month_days",this.month_days);
         jsonObject.put("month_costs_vm",this.month_costs_vm);
-        return jsonObject.toJSONString();
+        return jsonObject;
     }
 }
