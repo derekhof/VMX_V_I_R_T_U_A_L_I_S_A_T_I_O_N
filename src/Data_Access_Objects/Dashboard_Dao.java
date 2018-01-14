@@ -87,7 +87,7 @@ public class Dashboard_Dao {
             jsonArray.add(hypervisor.toJsonString());
         }
         response.setStatus(SUCCEED);
-        response.setPayload(jsonArray.toJSONString());
+        response.setPayload_array(jsonArray);
 
         return response;
     }
@@ -126,7 +126,7 @@ public class Dashboard_Dao {
         }
 
         response.setStatus(SUCCEED);
-        response.setPayload(jsonArray.toJSONString());
+        response.setPayload_array(jsonArray);
 
         return response;
     }
@@ -147,7 +147,7 @@ public class Dashboard_Dao {
         }
 
         response.setStatus(SUCCEED);
-        response.setPayload(jsonArray.toJSONString());
+        response.setPayload_array(jsonArray);
 
         return response;
     }

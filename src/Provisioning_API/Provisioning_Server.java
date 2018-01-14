@@ -16,7 +16,7 @@ import java.net.URL;
 public class Provisioning_Server {
 
     // Constant variabeles
-    private final String URL = "http://prov.vmx.local:8080/simulatie";       // URL of the provisioning server
+    private final String URL = "http://prov.vmx.local:8090/simulatie";       // URL of the provisioning server
     private final String FAILED = "FAILED";
     private final String SUCCEED = "SUCCEED";
     private Response response = new Response();

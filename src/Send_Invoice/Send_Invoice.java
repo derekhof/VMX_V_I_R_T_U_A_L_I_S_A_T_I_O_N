@@ -1,21 +1,20 @@
-package Invoice;
+package Send_Invoice;
 
-import Models.Request;
+import Models.Invoice;
 import Models.Response;
-import sun.misc.IOUtils;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Invoice {
+public class Send_Invoice {
 
     private static String URL = "http://localhost:8080/pdf-getInvoice";
 
 
     /////////////////////////////////////**********  HTTP communication  **********\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-    public byte[] sendRequest(Response response) {
+    public byte[] sendRequest(Invoice invoice) {
         byte[] bytes = null;
         URL obj;
         HttpURLConnection con;
@@ -36,7 +35,7 @@ public class Invoice {
 
             // create output stream.
             wr = new DataOutputStream(con.getOutputStream());
-            wr.writeBytes(response.getPayload());
+            wr.writeBytes(invoice.toJsonString());
             int responseCode;
 
             // clear the output stream
@@ -46,7 +45,7 @@ public class Invoice {
 
             // Print parameters HTTP POST request
             System.out.println("nSending 'POST' request to URL : " + URL);
-            System.out.println("Post Data : " + response.toJsonString());
+            System.out.println("Post Data : " + invoice.toJsonString());
             System.out.println("Response Code : " + responseCode);
 
             // check the response message code

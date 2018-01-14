@@ -1,9 +1,9 @@
 package Controllers;
 
 import Data_Access_Objects.Dashboard_Dao;
-import Invoice.Invoice;
 import Models.*;
 import Provisioning_API.Provisioning_Server;
+import Send_Invoice.Send_Invoice;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -31,6 +31,7 @@ public class DashboardController extends HttpServlet {
     private final String DUPLICATE = "DUPLICATE";
     private final String FAILED = "FAILED";
     private final String SUCCEED = "SUCCEED";
+    private boolean payload_is_array = false;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/json");
@@ -71,6 +72,9 @@ public class DashboardController extends HttpServlet {
                         // check the chosen command
                         switch (request_message.getCommand()) {
                             case "list-vms":
+                                // Set payload to array
+                                payload_is_array = true;
+
                                 // get data from db for request to provisioning server
                                 System.out.println("Dashboard controller: command list-vms");
                                 request_message = dashboard_dao.listVMs(request_message);
@@ -202,6 +206,9 @@ public class DashboardController extends HttpServlet {
                                 break;
 
                             case "get-hypervisors":
+                                // Set payload to array
+                                payload_is_array = true;
+
                                 System.out.println("Dashboard controller: command get-hypervisor");
                                 response_message = dashboard_dao.getHypervisorData(request_message);
                                 break;
@@ -211,11 +218,17 @@ public class DashboardController extends HttpServlet {
                                 response_message = dashboard_dao.setHypervisorData(request_message);
                                 break;
                             case "get-templates":
+                                // Set payload to array
+                                payload_is_array = true;
+
                                 System.out.println("Dashboard controller: command get_templates");
                                 response_message = dashboard_dao.getTemplateData(request_message);
                                 break;
 
                             case "get-service-levels":
+                                // Set payload to array
+                                payload_is_array = true;
+
                                 System.out.println("Dashboard controller: command service_levels");
                                 response_message = dashboard_dao.getServiceLevelData(request_message);
                                 break;
@@ -225,11 +238,11 @@ public class DashboardController extends HttpServlet {
                                 if(request_message.getParams().equals("DATES")) {
                                     getBillingDates(request_message, response_message, dashboard_dao);
                                 }else{
-                                    getMonthBill(response_message, request_message, dashboard_dao);
+                                    Invoice invoice = getMonthBill(request_message, dashboard_dao);
 
-                                    // call invoice api to generate a pdf
-                                    Invoice invoice = new Invoice();
-                                    byte[] pdf = invoice.sendRequest(response_message);
+                                    // call sendInvoice api to generate a pdf
+                                    Send_Invoice send_invoice = new Send_Invoice();
+                                    byte[] pdf = send_invoice.sendRequest(invoice);
 
                                     // adjust response entity
                                     response.reset();
@@ -248,8 +261,14 @@ public class DashboardController extends HttpServlet {
 
                         // Send Response Message
                         try (PrintWriter out = response.getWriter()) {
-                            System.out.println("Controller: Json response message: " + response_message.toJsonString());    // debug comment
-                            out.println(response_message.toJsonString());
+                            if(payload_is_array == true){
+
+                                out.println(response_message.toJsonStringWithArray());
+                                System.out.println("Controller: Json response message (json array): " + response_message.toJsonStringWithArray());    // debug comment
+                            }else{
+                                out.println(response_message.toJsonString());
+                                System.out.println("Controller: Json response message: " + response_message.toJsonString());    // debug comment
+                            }
                         }
                     }
                 } catch (ParseException | SQLException | ClassNotFoundException e) {
@@ -268,7 +287,15 @@ public class DashboardController extends HttpServlet {
             System.out.println("User whitout a valid session");    // debug comment
             try (PrintWriter out = response.getWriter()) {
                 System.out.println("Controller: Json response message: " + response_message.toJsonString());    // debug comment
-                out.println(response_message.toJsonString());
+
+                if(payload_is_array == true){
+                    out.println(response_message.toJsonStringWithArray());
+                    System.out.println("Controller: Json response message (json array): " + response_message.toJsonStringWithArray());    // debug comment
+                }else{
+                    out.println(response_message.toJsonString());
+                    System.out.println("Controller: Json response message: " + response_message.toJsonString());    // debug comment
+                }
+
             }
         }
 
@@ -329,8 +356,9 @@ public class DashboardController extends HttpServlet {
             response.setPayload("Dashboard dao: ListVmData() json format error");
         }
 
-        // Set Payload
-        response.setPayload(jsonArray.toJSONString());
+
+        // Set json array payload
+        response.setPayload_array(jsonArray);
 
         return response;
     }
@@ -427,7 +455,8 @@ public class DashboardController extends HttpServlet {
     }
 
     // Method return a bill of the required month
-    private Response getMonthBill(Response response_message, Request request_message, Dashboard_Dao dashboard_dao) {
+    private Invoice getMonthBill(Request request_message, Dashboard_Dao dashboard_dao) {
+        Invoice invoice = new Invoice();
 
         // get the required date from the request
         try {
@@ -456,6 +485,9 @@ public class DashboardController extends HttpServlet {
 
             // get all custumer info
             Employee employee = dashboard_dao.dbReadEmployee(request_message.getUsername());
+
+            // get all company info
+            Company company = dashboard_dao.dbReadCompany(employee.getCompany_id());
 
             // get all vm's off the customer
             List<Virtual_Machine> virtual_machines = dashboard_dao.dbReadVirtualMachines(employee.getCompany_id());
@@ -566,24 +598,20 @@ public class DashboardController extends HttpServlet {
                 }
             }
 
-            // Create String builder for response message
-            // intialize a stringbuilder for payload
-            JSONArray jsonArray = new JSONArray();
-
-            // loop through the bills
-            for (Bill bill : billings) {
-                jsonArray.add(bill.toJsonObject());
-            }
-
-            response_message.setPayload(jsonArray.toJSONString());
-            response_message.setStatus(SUCCEED);
+            // Set invoice information
+            Date start_bill_period = new Date(first_bill_day.getTimeInMillis());
+            Date end_bill_period = new Date(last_bill_day.getTimeInMillis());
+            invoice.setBill_period(start_bill_period + " - " + end_bill_period);
+            invoice.setInvoice_date(end_bill_period.toString());
+            invoice.setCompany(company);
+            invoice.setBills(billings);
 
         } catch (java.text.ParseException e) {
-            response_message.setStatus(FAILED);
             e.printStackTrace();
         }
 
-        return response_message;
+
+        return invoice;
     }
 
 
