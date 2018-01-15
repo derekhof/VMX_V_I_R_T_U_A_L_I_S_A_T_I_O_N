@@ -84,7 +84,7 @@ public class Dashboard_Dao {
         // loop through the hypervisors
         for (Hypervisor hypervisor : hypervisors) {
             // add the hypervisor to the response payload
-            jsonArray.add(hypervisor);
+            jsonArray.add(hypervisor.toJsonObject());
         }
         response.setStatus(SUCCEED);
         response.setPayload_array(jsonArray);
@@ -122,7 +122,7 @@ public class Dashboard_Dao {
         // loop through the hypervisors
         for (Template template : templates) {
             // add the hypervisor to the response payload
-            jsonArray.add(template);
+            jsonArray.add(template.toJsonObject());
         }
 
         response.setStatus(SUCCEED);
@@ -143,7 +143,7 @@ public class Dashboard_Dao {
         // loop through the hypervisors
         for (Service_Level service_level : service_levels) {
             // add the hypervisor to the response payload
-            jsonArray.add(service_level);
+            jsonArray.add(service_level.toJsonObject());
         }
 
         response.setStatus(SUCCEED);
