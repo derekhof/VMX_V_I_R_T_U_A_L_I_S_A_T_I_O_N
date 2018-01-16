@@ -31,9 +31,10 @@ public class DashboardController extends HttpServlet {
     private final String DUPLICATE = "DUPLICATE";
     private final String FAILED = "FAILED";
     private final String SUCCEED = "SUCCEED";
-    private boolean payload_is_array = false;
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        boolean payload_is_array = false;
         response.setContentType("application/json");
         System.out.println("Dashboard controller: HTTP POST Request");    // debug comment
 

@@ -10,6 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e89152e5-93b7-45e6-9759-d539bc005640" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Data_Access_Objects/Dashboard_Dao.class" afterPath="$PROJECT_DIR$/out/artifacts/VMX_war_exploded/WEB-INF/classes/Data_Access_Objects/Dashboard_Dao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -82,29 +83,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dashboard_Dao.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dashboard_Dao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2244">
-              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="145" column="54" lean-forward="false" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1515945520691" expanded="true" signature="14254:14294" ph="SELECT * FRO... employee" />
-                <marker date="1515945520691" expanded="true" signature="15564:15605" ph="SELECT * FRO... company" />
-                <marker date="1515945520691" expanded="true" signature="15570:15571" ph="SELECT * FRO... company" />
-                <marker date="1515945520691" expanded="true" signature="17252:17274" ph="SELECT * FRO... template" />
-                <marker date="1515945520691" expanded="true" signature="19202:19244" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515945520691" expanded="true" signature="19202:19247" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515945520691" expanded="true" signature="19487:19536" ph="SELECT * FRO... hypervisor" />
-                <marker date="1515945520691" expanded="true" signature="20866:20923" ph="UPDATE hyper... " />
-                <marker date="1515945520691" expanded="true" signature="21781:21825" ph="SELECT * FRO... virtual_machine" />
-                <marker date="1515945520691" expanded="true" signature="23410:23459" ph="SELECT * FRO... virtual_machine" />
-                <marker date="1515945520691" expanded="true" signature="25123:25142" ph="INSERT INTO virtual... " />
-                <marker date="1515945520691" expanded="true" signature="25123:25150" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515945520691" expanded="true" signature="25123:25242" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515945520691" expanded="true" signature="25123:25244" ph="INSERT INTO virtual_machine... " />
-                <marker date="1515945520691" expanded="true" signature="26250:26308" ph="UPDATE virtu... " />
-                <marker date="1515945520691" expanded="true" signature="27618:27645" ph="SELECT * FRO... service_level" />
+                <marker date="1516034733171" expanded="true" signature="14254:14294" ph="SELECT * FRO... employee" />
+                <marker date="1516034733171" expanded="true" signature="15564:15605" ph="SELECT * FRO... company" />
+                <marker date="1516034733171" expanded="true" signature="15570:15571" ph="SELECT * FRO... company" />
+                <marker date="1516034733171" expanded="true" signature="17252:17274" ph="SELECT * FRO... template" />
+                <marker date="1516034733171" expanded="true" signature="19202:19244" ph="SELECT * FRO... hypervisor" />
+                <marker date="1516034733171" expanded="true" signature="19202:19247" ph="SELECT * FRO... hypervisor" />
+                <marker date="1516034733171" expanded="true" signature="19487:19536" ph="SELECT * FRO... hypervisor" />
+                <marker date="1516034733171" expanded="true" signature="20866:20923" ph="UPDATE hyper... " />
+                <marker date="1516034733171" expanded="true" signature="21781:21825" ph="SELECT * FRO... virtual_machine" />
+                <marker date="1516034733171" expanded="true" signature="23410:23459" ph="SELECT * FRO... virtual_machine" />
+                <marker date="1516034733171" expanded="true" signature="25123:25142" ph="INSERT INTO virtual... " />
+                <marker date="1516034733171" expanded="true" signature="25123:25150" ph="INSERT INTO virtual_machine... " />
+                <marker date="1516034733171" expanded="true" signature="25123:25242" ph="INSERT INTO virtual_machine... " />
+                <marker date="1516034733171" expanded="true" signature="25123:25244" ph="INSERT INTO virtual_machine... " />
+                <marker date="1516034733171" expanded="true" signature="26250:26308" ph="UPDATE virtu... " />
+                <marker date="1516034733171" expanded="true" signature="27618:27645" ph="SELECT * FRO... service_level" />
               </folding>
             </state>
           </provider>
@@ -119,8 +120,6 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#245#246#0" expanded="true" />
                 <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#392#393#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,8 +128,8 @@
       <file leaf-file-name="Hypervisor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Models/Hypervisor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+            <state relative-caret-position="612">
+              <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,11 +137,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Service_Level.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Service_Level.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="212" column="68" lean-forward="false" selection-start-line="212" selection-start-column="65" selection-end-line="212" selection-end-column="82" />
+            <state relative-caret-position="5542">
+              <caret line="348" column="62" lean-forward="false" selection-start-line="348" selection-start-column="50" selection-end-line="348" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,18 +175,6 @@
             <state relative-caret-position="204">
               <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Send_Invoice.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Send_Invoice/Send_Invoice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -492,7 +489,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -583,6 +579,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -879,15 +876,18 @@
       <workItem from="1515837129491" duration="7015000" />
       <workItem from="1515866094833" duration="570000" />
       <workItem from="1515943615428" duration="2058000" />
-      <workItem from="1516033166479" duration="7000" />
+      <workItem from="1516033166479" duration="1990000" />
+      <workItem from="1516036615903" duration="25000" />
+      <workItem from="1516036992393" duration="9000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293347000" />
+    <option name="totallyTimeSpent" value="295364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -898,20 +898,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4423913" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5845324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16897655" sideWeight="0.5845324" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1369936" sideWeight="0.41546762" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15245202" sideWeight="0.49434572" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1191,14 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Service_Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Template.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -1270,6 +1262,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5542">
+          <caret line="348" column="62" lean-forward="false" selection-start-line="348" selection-start-column="50" selection-end-line="348" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Service_Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="36" column="25" lean-forward="false" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Hypervisor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1278,54 +1298,32 @@
             <element signature="imports" expanded="true" />
             <element signature="e#245#246#0" expanded="true" />
             <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Hypervisor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="55" column="22" lean-forward="false" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Data_Access_Objects/Dashboard_Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="145" column="54" lean-forward="false" selection-start-line="145" selection-start-column="54" selection-end-line="145" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1515945520691" expanded="true" signature="14254:14294" ph="SELECT * FRO... employee" />
-            <marker date="1515945520691" expanded="true" signature="15564:15605" ph="SELECT * FRO... company" />
-            <marker date="1515945520691" expanded="true" signature="15570:15571" ph="SELECT * FRO... company" />
-            <marker date="1515945520691" expanded="true" signature="17252:17274" ph="SELECT * FRO... template" />
-            <marker date="1515945520691" expanded="true" signature="19202:19244" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515945520691" expanded="true" signature="19202:19247" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515945520691" expanded="true" signature="19487:19536" ph="SELECT * FRO... hypervisor" />
-            <marker date="1515945520691" expanded="true" signature="20866:20923" ph="UPDATE hyper... " />
-            <marker date="1515945520691" expanded="true" signature="21781:21825" ph="SELECT * FRO... virtual_machine" />
-            <marker date="1515945520691" expanded="true" signature="23410:23459" ph="SELECT * FRO... virtual_machine" />
-            <marker date="1515945520691" expanded="true" signature="25123:25142" ph="INSERT INTO virtual... " />
-            <marker date="1515945520691" expanded="true" signature="25123:25150" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515945520691" expanded="true" signature="25123:25242" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515945520691" expanded="true" signature="25123:25244" ph="INSERT INTO virtual_machine... " />
-            <marker date="1515945520691" expanded="true" signature="26250:26308" ph="UPDATE virtu... " />
-            <marker date="1515945520691" expanded="true" signature="27618:27645" ph="SELECT * FRO... service_level" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="212" column="68" lean-forward="false" selection-start-line="212" selection-start-column="65" selection-end-line="212" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1516034733171" expanded="true" signature="14254:14294" ph="SELECT * FRO... employee" />
+            <marker date="1516034733171" expanded="true" signature="15564:15605" ph="SELECT * FRO... company" />
+            <marker date="1516034733171" expanded="true" signature="15570:15571" ph="SELECT * FRO... company" />
+            <marker date="1516034733171" expanded="true" signature="17252:17274" ph="SELECT * FRO... template" />
+            <marker date="1516034733171" expanded="true" signature="19202:19244" ph="SELECT * FRO... hypervisor" />
+            <marker date="1516034733171" expanded="true" signature="19202:19247" ph="SELECT * FRO... hypervisor" />
+            <marker date="1516034733171" expanded="true" signature="19487:19536" ph="SELECT * FRO... hypervisor" />
+            <marker date="1516034733171" expanded="true" signature="20866:20923" ph="UPDATE hyper... " />
+            <marker date="1516034733171" expanded="true" signature="21781:21825" ph="SELECT * FRO... virtual_machine" />
+            <marker date="1516034733171" expanded="true" signature="23410:23459" ph="SELECT * FRO... virtual_machine" />
+            <marker date="1516034733171" expanded="true" signature="25123:25142" ph="INSERT INTO virtual... " />
+            <marker date="1516034733171" expanded="true" signature="25123:25150" ph="INSERT INTO virtual_machine... " />
+            <marker date="1516034733171" expanded="true" signature="25123:25242" ph="INSERT INTO virtual_machine... " />
+            <marker date="1516034733171" expanded="true" signature="25123:25244" ph="INSERT INTO virtual_machine... " />
+            <marker date="1516034733171" expanded="true" signature="26250:26308" ph="UPDATE virtu... " />
+            <marker date="1516034733171" expanded="true" signature="27618:27645" ph="SELECT * FRO... service_level" />
           </folding>
         </state>
       </provider>
