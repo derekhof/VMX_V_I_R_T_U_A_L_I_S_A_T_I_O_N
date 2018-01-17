@@ -237,6 +237,9 @@ public class DashboardController extends HttpServlet {
                                 System.out.println("Dashboard controller: command get_bill");
 
                                 if(request_message.getParams().equals("DATES")) {
+                                    // Set payload to array
+                                    payload_is_array = true;
+
                                     getBillingDates(request_message, response_message, dashboard_dao);
                                 }else{
                                     Invoice invoice = getMonthBill(request_message, dashboard_dao);
@@ -441,15 +444,15 @@ public class DashboardController extends HttpServlet {
         }
 
         // Create payload
-        StringBuilder payload = new StringBuilder();
+        JSONArray jsonArray = new JSONArray();
         for (Calendar bill_date : billing_dates) {
 
             Date presentation_date = new Date(bill_date.getTimeInMillis());
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("billing_date", presentation_date);
-            payload.append(jsonObject.toJSONString());
+            jsonArray.add(jsonObject);
         }
-        response_message.setPayload(payload.toString());
+        response_message.setPayload_array(jsonArray);
         response_message.setStatus(SUCCEED);
 
         return response_message;
